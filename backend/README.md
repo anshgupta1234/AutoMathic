@@ -4,6 +4,10 @@
 - Description: Client sends username & password, they get back a success or error message
 - Request:
 ```json
+{
+"email": "example@example.com",
+"password": "PASSWORD"
+}
 ```
 - Return:
 ```json
