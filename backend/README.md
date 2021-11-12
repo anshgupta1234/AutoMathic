@@ -4,15 +4,24 @@
 - Description: Client sends username & password, they get back a success or error message
 - Request:
 ```json
+{
+"username": "username",
+"password": "PASSWORD"
+}
 ```
 - Return:
 ```json
 ```
 ## Signup(POST)
-- Endpoint:
-- Description:
+- Endpoint: /signup
+- Description: Client sends username, email, password, and confirm password, they get back a success or error message
 - Request:
 ```json
+{
+"username": "example@example.com",
+"email": "example@example.com",
+"password": "PASSWORD"
+}
 ```
 - Return:
 ```json
