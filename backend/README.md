@@ -1,7 +1,7 @@
 # Endpoints
 ## Login(POST)
 - Endpoint: /login
-- Description: Client sends username & password, they get back a success or error message
+- Description: Client sends username & password, they get back a success or error message. Current login is saved in session.
 - Request:
 ```json
 {
@@ -14,6 +14,26 @@
 ```
 - Assigned to:
 
+## Login(GET)
+- Endpoint: /login
+- Description: returns username and id of currently logged in user
+- Return:
+```json
+{
+    "username": "username",
+    "id": "038470as08q34ra"
+}
+```
+
+## Logout(GET)
+- Endpoint: /logout
+- Description: Logs you out of the account (clears the session)
+- Return:
+```json
+{
+    "success": true
+}
+```
 ## Signup(POST)
 - Endpoint: /signup
 - Description: Client sends username, email, password, and confirm password, they get back a success or error message
@@ -28,6 +48,19 @@
 - Return:
 ```json
 ```
+- Error Messages:
+    - Username already exists:
+    ```json
+    {
+        "error": "An account with that name already exists"
+    }
+    ```
+     - Email already exists:
+    ```json
+    {
+        "error": "An account with that email already exists"
+    }
+    ```
 - Assigned to:
 
 ## Dashboard (GET)
@@ -41,9 +74,15 @@
 ```
 - Assigned to: Siddharth Mohanty
 
-## Create Test (GET)
+## Create Test (POST)
 - Endpoint: /createTest
 - Description: Creates a new test with the default settings
+- Request:
+```json
+{
+    "name": "Unit 1 Math Test"
+}
+```
 - Return:
 ```json
 {
