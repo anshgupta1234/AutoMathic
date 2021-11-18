@@ -1,5 +1,33 @@
 # Automathic
 ## Data Schema
+### Tests
+```json
+[
+    {
+    "accessed": UnixTimeOfLastAccess,
+    "id": RandomGen,
+    "name": "Name",
+    "problems": [
+        {
+        "text": "Bob has `x` apples and he gets `y` more. How many does he have now?",
+        "answer": "x + y",
+        "isAnswerInt": true,
+        "variables": ["x", "y"],
+        "ranges": {
+            "x": {
+            "min": 3,
+            "max": 9
+            },
+            "y": {
+            "min": 4,
+            "max": 10
+            }
+        }
+        }
+    ]
+    }
+]
+```
 ## Endpoints(API DOCS)
 ### Login(POST)
 - Endpoint: /login
