@@ -1,5 +1,7 @@
-# Endpoints
-## Login(POST)
+# Automathic
+## Data Schema
+## Endpoints(API DOCS)
+### Login(POST)
 - Endpoint: /login
 - Description: Client sends username & password, they get back a success or error message. Current login is saved in session.
 - Request:
@@ -14,7 +16,7 @@
 ```
 - Assigned to:
 
-## Login(GET)
+### Login(GET)
 - Endpoint: /login
 - Description: returns username and id of currently logged in user
 - Return:
@@ -25,7 +27,7 @@
 }
 ```
 
-## Logout(GET)
+### Logout(GET)
 - Endpoint: /logout
 - Description: Logs you out of the account (clears the session)
 - Return:
@@ -34,7 +36,7 @@
     "success": true
 }
 ```
-## Signup(POST)
+### Signup(POST)
 - Endpoint: /signup
 - Description: Client sends username, email, password, and confirm password, they get back a success or error message
 - Request:
@@ -63,7 +65,7 @@
     ```
 - Assigned to:
 
-## Dashboard (GET)
+### Dashboard (GET)
 - Endpoint:
 - Description:
 - Request:
@@ -74,7 +76,7 @@
 ```
 - Assigned to: Siddharth Mohanty
 
-## Create Test (POST)
+### Create Test (POST)
 - Endpoint: /createTest
 - Description: Creates a new test with the default settings
 - Request:
@@ -91,7 +93,7 @@
 ```
 - Assigned to:
 
-## Edit Test (POST)
+### Edit Test (POST)
 - Endpoint:
 - Description:
 - Request:
@@ -102,7 +104,7 @@
 ```
 - Assigned to:
 
-## View Student Test (GET)
+### View Student Test (GET)
 - Endpoint:
 - Description:
 - Request:
@@ -113,7 +115,7 @@
 ```
 - Assigned to:
 
-## Settings (GET)
+### Settings (GET)
 - Endpoint:
 - Description:
 - Request:
@@ -124,7 +126,7 @@
 ```
 - Assigned to:
 
-## Update Settings (POST)
+### Update Settings (POST)
 - Endpoint:
 - Description:
 - Request:
@@ -135,7 +137,7 @@
 ```
 - Assigned to:
 
-## Test Validity (GET)
+### Test Validity (GET)
 - Endpoint:
 - Description:
 - Request:
@@ -146,7 +148,7 @@
 ```
 - Assigned to:
 
-## Export Grades (GET)
+### Export Grades (GET)
 - Endpoint:
 - Description:
 - Request:
@@ -156,4 +158,3 @@
 ```json
 ```
 - Assigned to:
-
