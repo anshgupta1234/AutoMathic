@@ -41,6 +41,17 @@
 ```
 - Assigned to: Siddharth Mohanty
 
+## Create Test (GET)
+- Endpoint: /createTest
+- Description: Creates a new test with the default settings
+- Return:
+```json
+{
+    "success": true
+}
+```
+- Assigned to:
+
 ## Edit Test (POST)
 - Endpoint:
 - Description:
