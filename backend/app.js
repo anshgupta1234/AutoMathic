@@ -1,13 +1,43 @@
-const express = require('express');
+const express = require('express')
+const {MongoClient} = require('mongodb');
 const app = express();
-const PORT = 3000;
-//const PORT = process.env.PORT; // Enviornment Variables???
+const port = process.env.PORT || 8000;
+const ObjectId = require('mongodb').ObjectId;
+const mongoose = require('mongoose');
+const uri = "mongodb+srv://cdevadhar:7NoS9MpSdVdjpEE3@cluster0.rboci.mongodb.net/creds?retryWrites=true&w=majority";
+
+const session = require('express-session');
+const router = express.Router();
+const signupRoute = require('./routes/signup');
+const loginRoute = require('./routes/login');
+const logoutRoute = require('./routes/logout');
+
+
+const connection = mongoose.createConnection(uri);
+var Schema = mongoose.Schema;
+
+var userSchema = new Schema({
+  username: String,
+  email: String, 
+  password: String
+});
+
+const User = connection.model('auth', userSchema, 'auth');
+
 app.use(express.json());
+app.use(session({secret: 'ssshhhhh', saveUninitialized: true, resave: true}));
+app.use('/signup', signupRoute);
+app.use('/login', loginRoute);
+app.use('/logout', logoutRoute);
 
 
-var test = require('./test');
 
-app.use('/test',test);
+app.listen(port, err => {
+    if (err) {
+      return console.log("ERROR", err);
+    }
+    console.log(`Listening on port ${port}`);
+  });
 
-app.listen(PORT);
-console.log("Listening on Port 3000!");
+module.exports.connection = connection;
+module.exports.User = User;
