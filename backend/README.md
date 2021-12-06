@@ -42,7 +42,7 @@
 - Return:
 ```json
 ```
-- Assigned to:
+- Assigned to: Chinmay
 
 ### Login(GET)
 - Endpoint: /login
@@ -54,6 +54,7 @@
     "id": "038470as08q34ra"
 }
 ```
+- Assigned to: Chinmay
 
 ### Logout(GET)
 - Endpoint: /logout
@@ -64,6 +65,7 @@
     "success": true
 }
 ```
+- Assigned to: Chinmay
 ### Signup(POST)
 - Endpoint: /signup
 - Description: Client sends username, email, password, and confirm password, they get back a success or error message
@@ -91,22 +93,29 @@
         "error": "An account with that email already exists"
     }
     ```
-- Assigned to:
+- Assigned to: Chinmay
 
 ### Dashboard (GET)
-- Endpoint:
-- Description:
-- Request:
-```json
-```
+- Endpoint: /dashboard
+- Description: Returns a list of each test's name and randomly generated id
 - Return:
 ```json
+[
+    {
+        "id": "123456789ABCD",
+        "name": "Unit 1 Test"
+    },
+    {
+        "id": "132456789ABCD",
+        "name": "Unit 2 Test"
+    }
+]
 ```
 - Assigned to: Siddharth Mohanty
 
 ### Create Test (POST)
 - Endpoint: /createTest
-- Description: Creates a new test with the default settings
+- Description: Creates a new test with the default settings and the name given
 - Request:
 ```json
 {
@@ -119,29 +128,95 @@
     "success": true
 }
 ```
-- Assigned to:
+- Assigned to: Samih
 
 ### Edit Test (POST)
-- Endpoint:
-- Description:
+- Endpoint: /editTest
+- Description: Takes in a test's id and its new data: passing in the entire test's data. The test in the user's collection with the specified id will be updated.
 - Request:
 ```json
+{
+    "testID": "18267E7DY1S23087",
+    "name": "Unit 3 Test",
+    "problems": [
+        {
+            "text": "Bob has `x` candies but he loses `y`. How many does he have now?",
+            "answer": "x - y",
+            "variables": ["x", "y"],
+            "ranges": {
+                "x": {
+                "min": 3,
+                "max": 9
+                },
+                "y": {
+                "min": 4,
+                "max": 10
+                }
+            }
+        }
+    ]
+}
 ```
-- Return:
+- Return: the updated test
 ```json
+{
+    "testID": "18267E7DY1S23087",
+    "name": "Unit 3 Test",
+    "problems": [
+        {
+            "text": "Bob has `x` candies but he loses `y`. How many does he have now?",
+            "answer": "x - y",
+            "variables": ["x", "y"],
+            "ranges": {
+                "x": {
+                "min": 3,
+                "max": 9
+                },
+                "y": {
+                "min": 4,
+                "max": 10
+                }
+            }
+        }
+    ]
+}
 ```
-- Assigned to:
+- Assigned to: Tanush
 
-### View Student Test (GET)
-- Endpoint:
+### View Student Test (POST)
+- Endpoint: /viewTest/
 - Description:
 - Request:
 ```json
+{
+    "testID": "18267E7DY1S23087"
+}
 ```
-- Return:
+- Return: the entire test with the specified id
 ```json
+{
+    "testID": "18267E7DY1S23087",
+    "name": "Unit 3 Test",
+    "problems": [
+        {
+            "text": "Bob has `x` candies but he loses `y`. How many does he have now?",
+            "answer": "x - y",
+            "variables": ["x", "y"],
+            "ranges": {
+                "x": {
+                "min": 3,
+                "max": 9
+                },
+                "y": {
+                "min": 4,
+                "max": 10
+                }
+            }
+        }
+    ]
+}
 ```
-- Assigned to:
+- Assigned to: Ronit
 
 ### Settings (GET)
 - Endpoint:
