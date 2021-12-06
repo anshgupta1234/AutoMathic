@@ -184,8 +184,8 @@
 - Assigned to: Tanush
 
 ### View Student Test (POST)
-- Endpoint: /viewTest/
-- Description:
+- Endpoint: /viewTest
+- Description: Returns a test with the id passed in if it exists
 - Request:
 ```json
 {
