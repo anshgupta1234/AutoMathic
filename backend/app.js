@@ -11,6 +11,7 @@ const router = express.Router();
 const signupRoute = require('./routes/signup');
 const loginRoute = require('./routes/login');
 const logoutRoute = require('./routes/logout');
+const dashboardRoute = require('./routes/logout');
 
 
 const connection = mongoose.createConnection(uri);
@@ -18,11 +19,19 @@ var Schema = mongoose.Schema;
 
 var userSchema = new Schema({
   username: String,
-  email: String, 
+  email: String,
   password: String
 });
 
+const testSchema = new Schema({
+  accessed: Number,
+  id: Number,
+  name: String,
+  problems: Array
+});
+
 const User = connection.model('auth', userSchema, 'auth');
+const Test = connection.model('auth', testSchema, 'auth');
 
 app.use(express.json());
 app.use(session({secret: 'ssshhhhh', saveUninitialized: true, resave: true}));
