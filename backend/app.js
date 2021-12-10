@@ -4,7 +4,8 @@ const app = express();
 const port = process.env.PORT || 8000;
 const ObjectId = require('mongodb').ObjectId;
 const mongoose = require('mongoose');
-const uri = "mongodb+srv://cdevadhar:7NoS9MpSdVdjpEE3@cluster0.rboci.mongodb.net/creds?retryWrites=true&w=majority";
+const credentials = require('./creds.json');
+const uri = credentials.mongoURI;
 
 const session = require('express-session');
 const router = express.Router();
@@ -13,7 +14,7 @@ const loginRoute = require('./routes/login');
 const logoutRoute = require('./routes/logout');
 const dashboardRoute = require('./routes/logout');
 
-
+console.log(uri);
 const connection = mongoose.createConnection(uri);
 var Schema = mongoose.Schema;
 
