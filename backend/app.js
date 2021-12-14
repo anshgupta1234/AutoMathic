@@ -12,7 +12,7 @@ const router = express.Router();
 const signupRoute = require('./routes/signup');
 const loginRoute = require('./routes/login');
 const logoutRoute = require('./routes/logout');
-const dashboardRoute = require('./routes/logout');
+const dashboardRoute = require('./routes/dashboard');
 
 console.log(uri);
 const connection = mongoose.createConnection(uri);
