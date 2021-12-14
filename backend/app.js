@@ -50,3 +50,4 @@ app.listen(port, err => {
 
 module.exports.connection = connection;
 module.exports.User = User;
+module.exports.Test = Test;
