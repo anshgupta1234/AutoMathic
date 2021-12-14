@@ -38,6 +38,7 @@ app.use(session({secret: 'ssshhhhh', saveUninitialized: true, resave: true}));
 app.use('/signup', signupRoute);
 app.use('/login', loginRoute);
 app.use('/logout', logoutRoute);
+app.use('/dashboard', dashboardRoute);
 
 
 
@@ -48,6 +49,6 @@ app.listen(port, err => {
     console.log(`Listening on port ${port}`);
   });
 
-module.exports.connection = connection;
 module.exports.User = User;
 module.exports.Test = Test;
+module.exports.connection = connection;
