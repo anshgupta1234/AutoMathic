@@ -252,7 +252,7 @@
 - Assigned to:
 
 ### Export Grades (GET)
-- Endpoint:
+- Endpoint: 
 - Description:
 - Request:
 ```json
