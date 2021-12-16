@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const monglue = require('../app');
+const bcrypt = require('bcryptjs');
 
 router.post('/', async function(req, res, next) {
   if (await monglue.User.find({username: req.body.username}).countDocuments() > 0) {

@@ -6,6 +6,7 @@ const session = require('express-session');
 
 router.get('/', (req, res) => {
     req.session.destroy();
+    monglue.Test = null;
     res.send({"success": "Logged out"});
 })
 

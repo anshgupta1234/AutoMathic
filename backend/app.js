@@ -5,7 +5,8 @@ const port = process.env.PORT || 8000;
 const ObjectId = require('mongodb').ObjectId;
 const mongoose = require('mongoose');
 const credentials = require('./creds.json');
-const uri = credentials.mongoURI;
+const credsURI = credentials.credsURI;
+const testsURI = credentials.testsURI;
 
 const session = require('express-session');
 const router = express.Router();
@@ -14,8 +15,9 @@ const loginRoute = require('./routes/login');
 const logoutRoute = require('./routes/logout');
 const dashboardRoute = require('./routes/dashboard');
 
-console.log(uri);
-const connection = mongoose.createConnection(uri);
+
+const credsConnection = mongoose.createConnection(credsURI);
+const testsConnection = mongoose.createConnection(testsURI);
 var Schema = mongoose.Schema;
 
 var userSchema = new Schema({
@@ -31,8 +33,8 @@ const testSchema = new Schema({
   problems: Array
 });
 
-const User = connection.model('auth', userSchema, 'auth');
-const Test = connection.model('auth', testSchema, 'auth');
+const User = credsConnection.model('auth', userSchema, 'auth');
+const Test = null;
 
 app.use(express.json());
 app.use(session({secret: 'ssshhhhh', saveUninitialized: true, resave: true}));
@@ -52,4 +54,6 @@ app.listen(port, err => {
 
 module.exports.User = User;
 module.exports.Test = Test;
-module.exports.connection = connection;
+module.exports.credsConnection = credsConnection;
+module.exports.testsConnection = testsConnection;
+module.exports.testSchema = testSchema;

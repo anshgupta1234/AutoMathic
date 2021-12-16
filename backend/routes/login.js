@@ -15,8 +15,10 @@ router.post('/', async function(req, res) {
   bcrypt.compare(req.body.password, user.password, function(err, result) {
       if (result) {
           req.session.username = user.username;
-          req.session.userID = user._id;
+          req.session.userID = user._id.toString();
           res.send({"success": "Logged in"});
+          console.log(user._id);
+          monglue.Test = monglue.testsConnection.model(user._id.toString(), monglue.testSchema, user._id.toString());
           
       } else {
           res.send({"error": "Incorrect password"});
