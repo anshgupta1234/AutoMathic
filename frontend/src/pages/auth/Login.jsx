@@ -46,6 +46,6 @@ export default class Login extends Component {
         }
     }
     signupButtonClicked=()=>{
-        //Bring them to the sign up page once the sign up page is created
+        window.location.replace("Signup.jsx")
     }
 }
