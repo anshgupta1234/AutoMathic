@@ -4,7 +4,7 @@ export default class Signup extends Component {
     render() { 
         return <div id='container'> 
             <h1 id='title'>Signup</h1>
-            {/* remember to fill in action link page */}
+            {/* remember to fill in action link page */} 
             {/* Form Signup */}
             <form action="" method="get">
                 <label htmlFor="username" className='usernameStyle'>Username:<input type="text" name="username" id="username"  placeholder='Enter your username' onChange={this.checkUsernameInput} /></label>
