@@ -218,6 +218,16 @@
 ```
 - Assigned to: Ronit
 
+### View Student Test
+- Endpoint: /viewStudentTest
+- Description:
+- Request:
+```json
+```
+- Return:
+```json
+```
+- Assigned to: Siddharth Mohanty
 ### Settings (GET)
 - Endpoint:
 - Description:
