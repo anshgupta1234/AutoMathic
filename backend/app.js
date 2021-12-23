@@ -1,4 +1,4 @@
-const express = require('express')
+const express = require('express');
 const {MongoClient} = require('mongodb');
 const app = express();
 const port = process.env.PORT || 8000;
@@ -14,6 +14,7 @@ const signupRoute = require('./routes/signup');
 const loginRoute = require('./routes/login');
 const logoutRoute = require('./routes/logout');
 const dashboardRoute = require('./routes/dashboard');
+const viewStudentTestRoute = require('./routes/dashboard');
 
 
 const credsConnection = mongoose.createConnection(credsURI);
@@ -42,6 +43,7 @@ app.use('/signup', signupRoute);
 app.use('/login', loginRoute);
 app.use('/logout', logoutRoute);
 app.use('/dashboard', dashboardRoute);
+app.use('/ViewStudentTest', dashboardRoute);
 
 
 
