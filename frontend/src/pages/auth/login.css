@@ -1,1 +1,143 @@
-//Login styles
+body{
+    box-sizing: border-box;
+    padding: 0px;
+    background-color: #9FD0EB;
+}
+/* Form styles */
+#container{
+    padding:0px 0px 20px 0px;
+    background-color: white;
+    position: absolute;
+    margin: auto;
+    width: 70%;
+    left: 15%;
+    top: 12%;
+    border-radius: 15px;
+    height: 580px;
+    box-shadow: 0px 0px 10px 8px rgba(0,0,0,0.5)    ;
+    min-height: 60%;
+    max-height:100%;
+}
+#title{
+    padding: 20px;
+    margin-bottom: 0px;
+    position: relative;
+    font-size: 50px;
+    font-family: 'Chivo', sans-serif;
+    background-color: #9FD0EB;
+    bottom: 7%;
+    border-radius: 15px 15px 0px 0px;
+    letter-spacing: 1px;
+}
+.usernameStyle{
+    width: 50%;
+    margin: auto;
+    margin-bottom:10px;
+    display: block;
+    font-size:25px ;
+}
+.usernameStyle input{
+    font-size: 18px;
+}
+.passwordStyle{
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom:20px;
+    display: block;
+    font-size:25px ;
+}
+.passwordStyle input{
+    font-size: 18px;
+}
+/* Input class */
+input{
+    border:1.5px black solid;
+    background-color: rgba(196, 196, 196, 20%);
+    padding: 10px;
+    margin:10px;
+    text-align: center;
+    transition: ease-in 0.2s;
+    border:1px solid black;
+    outline:none !important;
+}
+input:hover{
+    /* border: 2px black solid; */
+    cursor: pointer;
+    transition: ease-in 0.2s border;
+    background-color: rgba(80, 78, 78, 0.2);
+}
+/* .inputInfo{
+    padding:10px;
+} */
+/* Login Class */
+#loginBtn{
+    font-family: 'Chivo', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    display: block;
+    margin: auto;
+    width: 350px;
+    height:70px;
+    background-color: #9FD0EB;
+    border:none;
+    border-color: #9FD0EB;
+    border-radius: 30px;
+    letter-spacing: 1px;
+    transition:ease-out 0.15s;
+}
+#loginBtn:hover{
+    cursor: pointer;
+    background-color: #86c6e9;
+    box-shadow: 0px 2px 5px 5px rgba(159, 208, 235, 0.9);
+    transition: ease-out 0.15s;
+}
+/* Seperation line */
+.seperationLine{
+    background-color: black;
+    color: black;
+    width: 55%;
+    height: 2px;
+    font-size: 1px;
+    margin: auto;
+    margin-top: 50px;
+}
+/* Sign up button */
+#signupBtn{
+    font-family: 'Chivo', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    display: block;
+    margin: auto;
+    width: 250px;
+    height:55px;
+    background-color: #9FD0EB;
+    border:none;
+    border-color: #9FD0EB;
+    border-radius: 30px;
+    letter-spacing: 1px;
+    transition:ease-out 0.15s;
+}
+#signupBtn:hover{
+    cursor: pointer;
+    background-color: #86c6e9;
+    box-shadow: 0px 2px 5px 5px rgba(159, 208, 235, 0.9);
+    transition: ease-out 0.15s;
+}
+/* Automathic name placement */
+#authomathicName{
+    padding: 0px;
+    position: absolute;
+    bottom:0;
+    right: 0;
+}
+/* Input warning text style */
+.warning{
+    font-size: 20px;
+}
+.red{
+    border:3px red solid;
+}
+.green{
+    border:3px green solid;
+}
