@@ -12,3 +12,4 @@
 | View Test(POST)         | Ronit       | DEV    |
 | View Student Test(GET)  | Siddharth   | DEV    |
 | View Student Test(POST) | Siddharth   | DEV    |
+| Delete Test(POST)       | Manu        | DEV    |
