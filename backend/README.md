@@ -130,6 +130,24 @@
 ```
 - Assigned to: Samih
 
+### Delete Test (POST)
+- Endpoint: /deleteTest
+- Description: Deletes a test with a given id
+- Request:
+```json
+{
+    "id": "132456789ABCD"
+}
+```
+- Return:
+```json
+{
+    "success": true
+}
+```
+- Assigned to: Manu, Sanjeev
+
+
 ### Edit Test (POST)
 - Endpoint: /editTest
 - Description: Takes in a test's id and its new data: passing in the entire test's data. The test in the user's collection with the specified id will be updated.
