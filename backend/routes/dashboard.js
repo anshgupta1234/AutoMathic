@@ -16,11 +16,9 @@ function sortByKey(array) {
 router.get('/', async function (req, res) {
   console.log("request received");
   if (req.session.username) {
-    // TODO find from collection then sort
     const arr = await monglue.Test.find({});
     res.status(200).send(sortByKey(arr));
   } else {
-    // TODO error handling
     res.status(401).send({ error: "Not logged in" });
   }
 });
