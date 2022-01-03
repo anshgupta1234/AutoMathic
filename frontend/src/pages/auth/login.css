@@ -62,14 +62,11 @@ input{
     outline:none !important;
 }
 input:hover{
-    /* border: 2px black solid; */
     cursor: pointer;
     transition: ease-in 0.2s border;
     background-color: rgba(80, 78, 78, 0.2);
 }
-/* .inputInfo{
-    padding:10px;
-} */
+
 /* Login Class */
 #loginBtn{
     font-family: 'Chivo', sans-serif;
