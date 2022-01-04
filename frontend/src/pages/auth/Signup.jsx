@@ -52,7 +52,7 @@ export default class Signup extends Component {
             passwordInput.className="red"
         }else{
             usernameInput.className="green"
-            window.location.replace("/Dashboard.jsx"); //Not sure if this works
+            window.location.replace("./Dashboard.jsx"); //Not sure if this works
         }
     }
 }
