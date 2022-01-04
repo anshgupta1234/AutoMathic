@@ -2,6 +2,7 @@ body{
     box-sizing: border-box;
     padding: 0px;
     background-color: #9FD0EB;
+    
 }
 /* Form styles */
 #container{
@@ -14,11 +15,12 @@ body{
     top: 12%;
     border-radius: 15px;
     height: 580px;
-    box-shadow: 0px 0px 10px 8px rgba(0,0,0,0.5)    ;
+    box-shadow: 0px 0px 10px 8px rgba(0,0,0,0.5);
     min-height: 60%;
     max-height:100%;
 }
 #title{
+    text-align: center;
     padding: 20px;
     margin-bottom: 0px;
     position: relative;
@@ -62,11 +64,14 @@ input{
     outline:none !important;
 }
 input:hover{
+    /* border: 2px black solid; */
     cursor: pointer;
     transition: ease-in 0.2s border;
     background-color: rgba(80, 78, 78, 0.2);
 }
-
+/* .inputInfo{
+    padding:10px;
+} */
 /* Login Class */
 #loginBtn{
     font-family: 'Chivo', sans-serif;
@@ -97,7 +102,10 @@ input:hover{
     height: 2px;
     font-size: 1px;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 10px;
+}
+h2{
+    text-align: center;
 }
 /* Sign up button */
 #signupBtn{
@@ -130,6 +138,7 @@ input:hover{
 }
 /* Input warning text style */
 .warning{
+    text-align: center;
     font-size: 20px;
 }
 .red{
@@ -137,4 +146,9 @@ input:hover{
 }
 .green{
     border:3px green solid;
+}
+#signupBtn{
+    color:black;
+    font-size: 25px;
+    text-decoration: none !important;
 }
