@@ -1,6 +1,9 @@
-import React, { Component } from 'react';
-import "login.css"
-export default class Login extends Component {
+import React from 'react';
+import "./login.css"
+import { Link } from 'react-router-dom';
+// When the input is changed, check to see if they contain the wierd characters
+// Username and password can't have quotations,arrows,commas,periods,or any special characters
+class Login extends React.Component {
     render() { 
         return <div id='container'> 
             <h1 id='title'>Login</h1>
@@ -17,7 +20,7 @@ export default class Login extends Component {
             <h1 className='seperationLine'>Seperation line</h1>
             <h2>Don't have an account?</h2>
             {/* The signup button will bring them to the signup page */}
-            <button id='signupBtn' onClick={this.signupButtonClicked}>Sign up</button>
+            <Link to={"./signup.jsx"} style={{textDecoration:"none"}}><button id='signupBtn'>Sign up</button></Link>
             <h3 id='authomathicName'>Automathic</h3>
         </div>;
     }
@@ -45,7 +48,6 @@ export default class Login extends Component {
             passwordInput.className="green"
         }
     }
-    signupButtonClicked=()=>{
-        window.location.replace("./Signup.jsx")
-    }
 }
+ 
+export default Login;
