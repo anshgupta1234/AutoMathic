@@ -16,6 +16,7 @@ const logoutRoute = require('./routes/logout');
 const dashboardRoute = require('./routes/dashboard');
 const viewStudentTestRoute = require('./routes/viewStudentTest');
 const editTestRoute = require('./routes/editTestPost');
+const deleteTest = require('./routes/deleteTest');
 
 const credsConnection = mongoose.createConnection(credsURI);
 const testsConnection = mongoose.createConnection(testsURI);
