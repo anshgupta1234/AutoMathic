@@ -46,6 +46,7 @@ app.use('/logout', logoutRoute);
 app.use('/dashboard', dashboardRoute);
 app.use('/ViewStudentTest', viewStudentTestRoute);
 app.use('/editTest', editTestRoute);
+app.use('/deleteTest', deleteTest);
 
 
 
