@@ -12,11 +12,8 @@ router.post('/', async function (req, res) {
     return;
   };
 
-  // Finding the test with that id to delete
-  const dTest = await monglue.Test.findOne( { testID: id } );
-
   // Delete Test with given id: dTest
-  await monglue.Test.deleteOne( { testID: dTest } );
+  await monglue.Test.deleteOne( { testID: id } );
 
   // Success message
   res.send({"success": `test with id:${id}, has been deleted`})
