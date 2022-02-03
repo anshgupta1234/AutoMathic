@@ -25,6 +25,11 @@
         }
         }
     ]
+    "scores": {
+        "studentName": 123123,
+        "student2Name": 123123,
+        "student3Name": 123123,
+    }
     }
 ]
 ```
