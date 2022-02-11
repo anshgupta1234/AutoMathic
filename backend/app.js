@@ -39,7 +39,7 @@ const User = credsConnection.model('auth', userSchema, 'auth');
 const Test = null;
 
 app.use(express.json());
-app.use(session({secret: 'ssshhhhh', saveUninitialized: true, resave: true}));
+app.use(session({secret: 'AzRiA80aMSe6fIvc', saveUninitialized: true, resave: true}));
 app.use('/signup', signupRoute);
 app.use('/login', loginRoute);
 app.use('/logout', logoutRoute);
