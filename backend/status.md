@@ -8,15 +8,15 @@
 | Signup(POST)            | Chinmay     | DONE          |
 | Dashboard(GET)          | Siddharth   | DONE          |
 | View Test(POST)         | Ronit       | DONE          |
+| View Student Test(GET)  | Siddharth   | DONE          |
+| View Student Test(POST) | Siddharth   | DONE          |
 | Create Test(POST)       | Samih       | DEV           |
 | Edit Test(POST)         | Tanush      | DEV           |
-| View Student Test(GET)  | Siddharth   | DEV           |
-| View Student Test(POST) | Siddharth   | DEV           |
 | Delete Test(POST)       | Manu        | DEV           |
 | Export Grades(POST)     |             | NOT ASSIGNED  |
-| View Grades(POST)       |             |               |
+| View Grades(POST)       |             | NOT ASSIGNED  |
 | Save Test(POST)         |             | NOT ASSIGNED  |
 | Submit Test(POST)       |             | NOT ASSIGNED  |
-| Start Test()            |             |               |
-| End Test()              |             |               |
-| Show Stats()            |             |               |
+| Start Test()            |             | NOT ASSIGNED  |
+| End Test()              |             | NOT ASSIGNED  |
+| Show Stats()            |             | NOT ASSIGNED  |
