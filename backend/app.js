@@ -35,8 +35,13 @@ const testSchema = new Schema({
   problems: Array
 });
 
+const versionsSchema = new Schema({
+ // TODO
+});
+
 const User = credsConnection.model('auth', userSchema, 'auth');
 const Test = null;
+const Versions = null;
 
 app.use(express.json());
 app.use(session({secret: 'AzRiA80aMSe6fIvc', saveUninitialized: true, resave: true}));
