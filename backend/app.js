@@ -17,6 +17,7 @@ const dashboardRoute = require('./routes/dashboard');
 const viewStudentTestRoute = require('./routes/viewStudentTest');
 const editTestRoute = require('./routes/editTestPost');
 const deleteTest = require('./routes/deleteTest');
+const generateTest = require('./routes/generateTest');
 
 const credsConnection = mongoose.createConnection(credsURI);
 const testsConnection = mongoose.createConnection(testsURI);
@@ -52,6 +53,7 @@ app.use('/dashboard', dashboardRoute);
 app.use('/ViewStudentTest', viewStudentTestRoute);
 app.use('/editTest', editTestRoute);
 app.use('/deleteTest', deleteTest);
+app.use('/generateTest', generateTest);
 
 
 
