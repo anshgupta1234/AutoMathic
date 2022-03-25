@@ -294,3 +294,24 @@
 ```json
 ```
 - Assigned to:
+
+### Submit Test (POST)
+- Endpoint: /submitTest
+- Decription: Submits a student's completed test and grades it according to their version
+- Request: The version id, student info and answers
+```json
+{
+  "version": "18267E7DY1S23087",
+  "name": "Chinmay",
+  "studentID": 1111111,
+  "answers": [1, 2, 3, 4]
+}
+```
+- Return: Student name, id, and score
+```json
+{
+  "name": "Chinmay",
+  "id": 1111111,
+  "score": 0
+}
+```
