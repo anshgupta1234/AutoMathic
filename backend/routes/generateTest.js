@@ -3,6 +3,7 @@ const router = express.Router();
 const monglue = require('../app');
 const session = require('express-session');
 const bcrypt = require('bcryptjs');
+const algo = require('../algo');
 
 router.post('/', function(req, res) {
   let key = req.body.id;
@@ -12,7 +13,6 @@ router.post('/', function(req, res) {
     res.status(401).send({error: "Invalid id"});
   }
   else {
-    res.status(200).send(test);
+    res.status(200).send(algo.algo(algo.test[problems]));
   }
-   // Use the algo
 });
